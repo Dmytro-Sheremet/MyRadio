@@ -1,5 +1,5 @@
-# RSS-feed
- [RSS-feed](https://frozen-ocean-82694.herokuapp.com/channels) - App, deployed on heroku
+# MyRadio
+ [My-Radio](https://my-online-radio.herokuapp.com/) - App, deployed on heroku
 
 ## Getting Started
 
@@ -16,11 +16,11 @@ Node.js JavaScript run-time environment on your local machine
 
 type in your terminal :
 ```
-$ git clone https://github.com/Dmytro-Sheremet/rss-feed.git
+$ git clone https://github.com/Dmytro-Sheremet/MyRadio.git
 ```
 go to project dir:
 ```
-$ cd rss-feed
+$ cd MyRadio-master
 ```
 install server dependencies:
 ```
@@ -35,7 +35,7 @@ exit rerminal
 
 ## Running the app
 
-open two terminals in project <rss-feed> directory:
+open two terminals in project <my-radio> directory:
 With the help of the first we will launch the server on port 5000:
 ```
 $ npm run dev-server
