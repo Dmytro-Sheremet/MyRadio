@@ -11,16 +11,16 @@ class EditChannel extends Component {
 	render() {
 		const { channel } = this.props;
 		return (
-			<div className='card card-body bg-light mb-2'>
+			<div className='mb-2'>
 				<div className='row'>
-					<div className=''>
+					<div className='col'>
 						<audio src={channel.link} controls />
 					</div>
-					<div className=''>
-						<h3>{channel.name}</h3>
+					<div className='col'>
+						<h5>{channel.name}</h5>
 					</div>
-					<div className=''>
-						<h4>{channel.rating}</h4>
+					<div className='col'>
+						<h5>Rating {channel.rating}</h5>
 					</div>
 					<button onClick={this.onDeleteClick.bind(this, channel._id)} type='button' className='btn btn-danger mr-1'>
 						<i className='fas fa-times' />

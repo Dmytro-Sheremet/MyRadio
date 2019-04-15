@@ -4,13 +4,13 @@ import Spinner from '../common/Spinner';
 import EditChannel from './EditChannel';
 import { getChannels } from '../../actions/channelActions';
 
-class EditChannels extends Component {
+class EditChannelsFeed extends Component {
 	componentDidMount() {
 		this.props.getChannels();
 	}
 
-	componentWillUnmount(){
-		console.log('unmounted')
+	componentWillUnmount() {
+		console.log('unmounted');
 	}
 
 	render() {
@@ -43,4 +43,4 @@ const mapStateToProps = state => ({
 export default connect(
 	mapStateToProps,
 	{ getChannels }
-)(EditChannels);
+)(EditChannelsFeed);

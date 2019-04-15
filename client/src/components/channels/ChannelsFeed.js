@@ -4,7 +4,7 @@ import Spinner from '../common/Spinner';
 import Channel from './Channel';
 import { getChannels } from '../../actions/channelActions';
 
-class Channels extends Component {
+class ChannelsFeed extends Component {
 	componentDidMount() {
 		this.props.getChannels();
 	}
@@ -39,4 +39,4 @@ const mapStateToProps = state => ({
 export default connect(
 	mapStateToProps,
 	{ getChannels }
-)(Channels);
+)(ChannelsFeed);

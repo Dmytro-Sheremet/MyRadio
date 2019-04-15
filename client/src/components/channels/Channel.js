@@ -1,32 +1,43 @@
 import React, { Component } from 'react';
 
 class Channel extends Component {
+	rating = num => {
+		if (num === 3) {
+			return (
+				<div>
+					<i className='fas fa-star' />
+					<i className='fas fa-star' />
+					<i className='fas fa-star' />
+				</div>
+			);
+		} else if (num === 2) {
+			return (
+				<div>
+					<i className='fas fa-star' />
+					<i className='fas fa-star' />
+				</div>
+			);
+		} else {
+			return (
+				<div>
+					<i className='fas fa-star' />
+				</div>
+			);
+		}
+	};
+
 	render() {
 		const { channel } = this.props;
 
 		return (
-			<div>
-				<div className='card card-body bg-light mb-2'>
-					<div className='row'>
-						<div className='col-6'>
-							<audio src={channel.link} controls />
-						</div>
-						<div className='col-6'>
-							<h4>{channel.rating}</h4>
-						</div>
-					</div>
+			<div className='row'>
+				<div className='col-4 '>
+					<h5>{channel.name}</h5>
 				</div>
-
-				<div className='card card-body bg-light mb-2'>
-					<div className='row'>
-						<div className='col-lg-6 col-md-4 col-8'>
-							<h3>{channel.name}</h3>
-						</div>
-						<div className='col-md-4 d-none d-md-block'>
-							<h4>{channel.rating}</h4>
-						</div>
-					</div>
+				<div className='col-6'>
+					<audio src={channel.link} controls />
 				</div>
+				<div className='col-2'>{this.rating(channel.rating)}</div>
 			</div>
 		);
 	}

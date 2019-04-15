@@ -31,8 +31,9 @@ class CreateChannel extends Component {
 				rating: '',
 				errors: {}
 			});
+			nextProps.history.push('/channels');
+			this.props.tools.clearInput = false;
 		}
-		this.props.tools.clearInput = false;
 	}
 
 	onSubmit(e) {
@@ -70,7 +71,6 @@ class CreateChannel extends Component {
 								Go Back
 							</Link>
 							<h1 className='display-4 text-center'>Add channel</h1>
-							<small className='d-block pb-3'>* = required fields</small>
 							<form onSubmit={this.onSubmit}>
 								<TextFieldGroup
 									placeholder='* Channels Name'
@@ -98,7 +98,7 @@ class CreateChannel extends Component {
 									info='select an your rating to new channel'
 								/>
 
-								<input type='submit' value='Submit' className='btn btn-info btn-block mt-4' />
+								<input type='submit' value='Submit' className='btn btn-warning btn-block mt-4' />
 							</form>
 						</div>
 					</div>
