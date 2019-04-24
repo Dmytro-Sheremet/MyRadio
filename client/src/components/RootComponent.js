@@ -17,24 +17,22 @@ class RootComponent extends Component {
 		return (
 			<div className='App'>
 				<Navbar />
-
 				<Route exact path='/' component={Landing} />
-
 				<div className='container'>
 					<Route exact path='/register' component={Register} />
 					<Route exact path='/login' component={Login} />
-
 					<Route exact path='/channels' component={ChannelsFeed} />
-
-					<Switch>
-						<PrivateRoute exact path='/channels/addone' component={CreateChannel} />
-					</Switch>
-
-					<Switch>
-						<PrivateRoute exact path='/channels/edit' component={EditChannelsFeed} />
-					</Switch>
+					<PrivateRoute
+						exact
+						path='/channels/addone'
+						component={CreateChannel}
+					/>
+					<PrivateRoute
+						exact
+						path='/channels/edit'
+						component={EditChannelsFeed}
+					/>
 				</div>
-
 				<Footer />
 			</div>
 		);

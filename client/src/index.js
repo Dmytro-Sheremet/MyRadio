@@ -2,14 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
 import store from './store';
 import RootComponent from './components/RootComponent';
-
 import jwt_decode from 'jwt-decode';
-
 import setAuthToken from './utils/setAuthToken';
-
 import { setCurrentUser, logoutUser } from './actions/authActions';
 
 if (localStorage.jwtToken) {
@@ -27,16 +23,14 @@ if (localStorage.jwtToken) {
 	}
 }
 
-
-
-const render = RootComponent =>
+const render = Component =>
 	ReactDOM.render(
 		<Provider store={store}>
 			<BrowserRouter>
-				<RootComponent />
+				<Component />
 			</BrowserRouter>
 		</Provider>,
-		document.getElementById('root')
+		document.getElementById('root'),
 	);
 
 render(RootComponent);
