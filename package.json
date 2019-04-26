@@ -13,16 +13,16 @@
 	"license": "ISC",
 	"dependencies": {
 		"bcryptjs": "^2.4.3",
-		"body-parser": "^1.18.3",
+		"body-parser": "^1.19.0",
 		"express": "^4.16.4",
 		"feed-to-json-promise": "^1.8.2",
 		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^5.4.19",
+		"mongoose": "^5.5.4",
 		"passport": "^0.4.0",
 		"passport-jwt": "^4.0.0",
 		"validator": "^10.11.0"
 	},
 	"devDependencies": {
-		"nodemon": "^1.18.10"
+		"nodemon": "^1.18.11"
 	}
 }
