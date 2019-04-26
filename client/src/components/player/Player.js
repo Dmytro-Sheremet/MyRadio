@@ -62,15 +62,18 @@ export default class Example extends React.Component {
 					selectedSong={this.state.currentSong}
 					onSongSelected={this.handleSongSelected}
 				/>
+				<hr />
 				<label>
 					<input
 						type='checkbox'
 						checked={this.state.controlled}
 						onChange={this.handleControlledComponentChange}
-					/>{' '}
+					/>
 					Controlled Component
 				</label>
 				{this.state.currentSong && this.renderCurrentSong()}
+				<hr /> 
+
 				<PlayerControls
 					playStatus={this.state.playStatus}
 					loop={loop}
