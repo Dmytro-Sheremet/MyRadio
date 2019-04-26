@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
 
@@ -26,7 +25,11 @@ class Navbar extends Component {
 					</Link>
 				</li>
 				<li className='nav-item'>
-					<Link onClick={this.onLogoutClick.bind(this)} to='#' className='nav-link'>
+					<Link
+						onClick={this.onLogoutClick.bind(this)}
+						to='#'
+						className='nav-link'
+					>
 						Logout
 					</Link>
 				</li>
@@ -54,7 +57,12 @@ class Navbar extends Component {
 					<Link className='navbar-brand' to='/'>
 						MyRadio
 					</Link>
-					<button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#mobile-nav'>
+					<button
+						className='navbar-toggler'
+						type='button'
+						data-toggle='collapse'
+						data-target='#mobile-nav'
+					>
 						<span className='navbar-toggler-icon' />
 					</button>
 
@@ -63,6 +71,11 @@ class Navbar extends Component {
 							<li className='nav-item'>
 								<Link className='nav-link' to='/channels'>
 									Channels
+								</Link>
+							</li>
+							<li className='nav-item'>
+								<Link className='nav-link' to='/player'>
+									Player
 								</Link>
 							</li>
 						</ul>
@@ -74,16 +87,11 @@ class Navbar extends Component {
 	}
 }
 
-Navbar.propTypes = {
-	logoutUser: PropTypes.func.isRequired,
-	auth: PropTypes.object.isRequired
-};
-
 const mapStateToProps = state => ({
-	auth: state.auth
+	auth: state.auth,
 });
 
 export default connect(
 	mapStateToProps,
-	{ logoutUser }
+	{ logoutUser },
 )(Navbar);

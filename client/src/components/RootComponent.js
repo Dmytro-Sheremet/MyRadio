@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+// import { Route, Switch } from 'react-router-dom';
 // import { connect } from 'react-redux';
 
 import Navbar from './layout/Navbar';
@@ -11,7 +12,7 @@ import PrivateRoute from './common/PrivateRoute';
 import ChannelsFeed from './channels/ChannelsFeed';
 import CreateChannel from './channels/CreateChannel';
 import EditChannelsFeed from './channels/EditChannelsFeed';
-
+import Player from './player/Player';
 class RootComponent extends Component {
 	render() {
 		return (
@@ -22,6 +23,8 @@ class RootComponent extends Component {
 					<Route exact path='/register' component={Register} />
 					<Route exact path='/login' component={Login} />
 					<Route exact path='/channels' component={ChannelsFeed} />
+					<Route exact path='/player' component={Player} />
+
 					<PrivateRoute
 						exact
 						path='/channels/addone'
