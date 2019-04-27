@@ -2,7 +2,9 @@
 import React from 'react';
 import Button from '../common/Button';
 
-const PlayControls = ({ src }) => {
+const PlayControls = ({ props }) => {
+	const src = props.link;
+
 	const Player = new Audio();
 
 	Player.src = 'http://onair.lviv.fm:8000/lviv.fm';

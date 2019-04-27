@@ -73,11 +73,11 @@ class Navbar extends Component {
 									Channels
 								</Link>
 							</li>
-							<li className='nav-item'>
+							{/* <li className='nav-item'>
 								<Link className='nav-link' to='/player'>
 									Player
 								</Link>
-							</li>
+							</li> */}
 						</ul>
 						{isAuthenticated ? authLinks : guestLinks}
 					</div>

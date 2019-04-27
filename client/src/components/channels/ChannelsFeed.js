@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Spinner from '../common/Spinner';
-// import Channel from './Channel';
 import { getChannels } from '../../actions/channelActions';
-import PlayControls from '../player/PlayControls';
+import PlayPanel from '../player/PlayPanel';
 
 class ChannelsFeed extends Component {
 	componentDidMount() {
@@ -21,7 +20,7 @@ class ChannelsFeed extends Component {
 			if (channels.length > 0) {
 				allChannels = channels.map(channel => (
 					<div key={channel._id} className='mb-2'>
-						<PlayControls src={channel.link} />
+						<PlayPanel props={channel} />
 					</div>
 				));
 			} else {
@@ -29,11 +28,7 @@ class ChannelsFeed extends Component {
 			}
 		}
 
-		return (
-			<div className='container'>
-				<div className='col-md-12'>{allChannels}</div>
-			</div>
-		);
+		return <>{allChannels}</>;
 	}
 }
 

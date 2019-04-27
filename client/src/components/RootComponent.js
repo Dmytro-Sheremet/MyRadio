@@ -23,8 +23,6 @@ class RootComponent extends Component {
 					<Route exact path='/register' component={Register} />
 					<Route exact path='/login' component={Login} />
 					<Route exact path='/channels' component={ChannelsFeed} />
-					<Route exact path='/player' component={PlayPanel} />
-
 					<PrivateRoute
 						exact
 						path='/channels/addone'
