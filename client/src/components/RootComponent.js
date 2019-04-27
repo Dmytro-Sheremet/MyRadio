@@ -12,7 +12,7 @@ import PrivateRoute from './common/PrivateRoute';
 import ChannelsFeed from './channels/ChannelsFeed';
 import CreateChannel from './channels/CreateChannel';
 import EditChannelsFeed from './channels/EditChannelsFeed';
-import Player from './player/Player';
+import PlayPanel from './player/PlayPanel';
 class RootComponent extends Component {
 	render() {
 		return (
@@ -23,7 +23,7 @@ class RootComponent extends Component {
 					<Route exact path='/register' component={Register} />
 					<Route exact path='/login' component={Login} />
 					<Route exact path='/channels' component={ChannelsFeed} />
-					<Route exact path='/player' component={Player} />
+					<Route exact path='/player' component={PlayPanel} />
 
 					<PrivateRoute
 						exact

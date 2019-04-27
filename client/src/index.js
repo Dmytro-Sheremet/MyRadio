@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import RootComponent from './components/RootComponent';
@@ -26,9 +26,9 @@ if (localStorage.jwtToken) {
 const render = Component =>
 	ReactDOM.render(
 		<Provider store={store}>
-			<BrowserRouter>
+			<Router>
 				<Component />
-			</BrowserRouter>
+			</Router>
 		</Provider>,
 		document.getElementById('root'),
 	);

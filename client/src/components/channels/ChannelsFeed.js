@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Spinner from '../common/Spinner';
 // import Channel from './Channel';
 import { getChannels } from '../../actions/channelActions';
-import Player from '../player/Player';
+import PlayControls from '../player/PlayControls';
 
 class ChannelsFeed extends Component {
 	componentDidMount() {
@@ -21,7 +21,7 @@ class ChannelsFeed extends Component {
 			if (channels.length > 0) {
 				allChannels = channels.map(channel => (
 					<div key={channel._id} className='mb-2'>
-						<Player src={channel.link} />
+						<PlayControls src={channel.link} />
 					</div>
 				));
 			} else {
