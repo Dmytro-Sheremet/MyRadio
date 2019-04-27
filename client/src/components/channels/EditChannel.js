@@ -14,15 +14,13 @@ class EditChannel extends Component {
 			<div className='mb-2'>
 				<div className='row'>
 					<div className='col'>
-						<audio src={channel.link} controls />
-					</div>
-					<div className='col'>
 						<h5>{channel.name}</h5>
 					</div>
-					<div className='col'>
-						<h5>Rating {channel.rating}</h5>
-					</div>
-					<button onClick={this.onDeleteClick.bind(this, channel._id)} type='button' className='btn btn-danger mr-1'>
+					<button
+						onClick={this.onDeleteClick.bind(this, channel._id)}
+						type='button'
+						className='btn btn-danger mr-1'
+					>
 						<i className='fas fa-times' />
 					</button>
 				</div>
@@ -36,5 +34,5 @@ class EditChannel extends Component {
 
 export default connect(
 	null,
-	{ deleteChannel }
+	{ deleteChannel },
 )(EditChannel);

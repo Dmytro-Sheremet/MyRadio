@@ -35,7 +35,7 @@ class Channel extends Component {
 					<h5>{channel.name}</h5>
 				</div>
 				<div className='col-6'>
-					<audio src={channel.link} controls />
+					<audio src={channel.link} controls preload='none' />
 				</div>
 				<div className='col-2'>{this.rating(channel.rating)}</div>
 			</div>
