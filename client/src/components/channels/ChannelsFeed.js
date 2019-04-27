@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Spinner from '../common/Spinner';
-import Channel from './Channel';
+// import Channel from './Channel';
 import { getChannels } from '../../actions/channelActions';
+import Player from '../player/Player';
 
 class ChannelsFeed extends Component {
 	componentDidMount() {
@@ -18,7 +19,11 @@ class ChannelsFeed extends Component {
 			allChannels = <Spinner />;
 		} else {
 			if (channels.length > 0) {
-				allChannels = channels.map(channel => <Channel key={channel._id} channel={channel} />);
+				allChannels = channels.map(channel => (
+					<div key={channel._id} className='mb-2'>
+						<Player src={channel.link} />
+					</div>
+				));
 			} else {
 				allChannels = <h4>No channels found...</h4>;
 			}
@@ -33,10 +38,10 @@ class ChannelsFeed extends Component {
 }
 
 const mapStateToProps = state => ({
-	channels: state.channels
+	channels: state.channels,
 });
 
 export default connect(
 	mapStateToProps,
-	{ getChannels }
+	{ getChannels },
 )(ChannelsFeed);
