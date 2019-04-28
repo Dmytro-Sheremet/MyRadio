@@ -1,6 +1,9 @@
 # MyRadio
  [My-Radio](https://my-online-radio.herokuapp.com/) - App, deployed on heroku
 
+# MyRadio-DEV
+ [My-Radio](https://my-online-radio-dev.herokuapp.com/#/channels) - Beta/dev - version of App, deployed on heroku
+
 ## Getting Started
 
 These instructions will get you a copy of the project up 
