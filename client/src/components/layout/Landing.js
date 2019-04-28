@@ -22,10 +22,10 @@ class Landing extends Component {
 									Save links to your favorite radio-streaming services
 								</p>
 								<hr />
-								<Link to='/register' className='btn btn-lg btn-info mr-2'>
+								<Link to='/register' className='btn btn-lg btn-warning mr-2'>
 									Sign Up
 								</Link>
-								<Link to='/login' className='btn btn-lg btn-light'>
+								<Link to='/login' className='btn btn-lg btn-warning'>
 									Login
 								</Link>
 							</div>
